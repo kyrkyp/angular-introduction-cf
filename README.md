@@ -2,6 +2,8 @@
 
 ## 12/10/2023
 
+-Δημιουργία νέου component
+
 - Απλή δέσμευση (simple binding) χαρακτηριστικού της κλάσσης του component 
 στο template του component
 
