@@ -5,4 +5,4 @@
 - Απλή δέσμευση (simple binding) χαρακτηριστικού της κλάσσης του component 
 στο template του component
 
-- Χρήση του placeholder `{{<attribut_name}}`
+- Χρήση του placeholder `{{<attribute_name}}`
