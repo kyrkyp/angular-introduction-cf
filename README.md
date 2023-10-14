@@ -8,3 +8,11 @@
 στο template του component
 
 - Χρήση του placeholder `{{<attribute_name}}`
+
+## 13/10/2023
+
+- Alternate component input
+
+- input | undefined 
+- *ngif για εμφάνιση υπο συνθήκη στο template
+- ng-container & ng-template
