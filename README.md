@@ -18,3 +18,9 @@
 - ng-container & ng-template
 
 -*ngfor directive
+
+
+-event binding (teplate -> controller)
+-Click handlers
+-Input handler
+-Two way binding

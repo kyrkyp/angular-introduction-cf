@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { PersonAltComponent } from './person-alt/person-alt.component';
 import { PersonComponent } from './person/person.component';
 import { Person } from './interfaces/person';
+import { EventBindComponent } from './event-bind/event-bind.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, PersonComponent, PersonAltComponent],
+  imports: [CommonModule, PersonComponent, PersonAltComponent, EventBindComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
