@@ -6,3 +6,7 @@
 <app-person [person]="person"></app-person>
 
 <app-person-alt></app-person-alt>
+
+<p>Details of more users: </p>
+
+<app-person-alt *ngFor="let user of users" [person]="user"></app-person-alt>

@@ -16,3 +16,5 @@
 - input | undefined 
 - *ngif για εμφάνιση υπο συνθήκη στο template
 - ng-container & ng-template
+
+-*ngfor directive
