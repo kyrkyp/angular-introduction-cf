@@ -7,11 +7,12 @@ import { PersonComponent } from './person/person.component';
 import { Person } from './interfaces/person';
 import { EventBindComponent } from './event-bind/event-bind.component';
 import { PersonCardComponent } from './person-card/person-card.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, PersonComponent, PersonAltComponent, EventBindComponent, OutputDemoComponent, PersonCardComponent],
+  imports: [CommonModule, PersonComponent, PersonAltComponent, EventBindComponent, OutputDemoComponent, PersonCardComponent, TemplateDrivenFormComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -119,5 +120,9 @@ export class AppComponent {
   onSendUser(user: Person) {
     console.log(user)
     this.sentUser = user
+  }
+
+  onNewPerson(person: Person) {
+    this.users.push(person)
   }
 }
