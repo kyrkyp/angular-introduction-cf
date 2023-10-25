@@ -20,4 +20,8 @@ export class AppService {
   getUserById(id: number) {
     return this.http.get<Person>('htttp://localhost:3000/users/' + id)
   }
+
+  deleteUserById(id: number) {
+    return this.http.delete<Person>('htttp://localhost:3000/users/' + id)
+  }
 }

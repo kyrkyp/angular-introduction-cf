@@ -1,1 +1,12 @@
-<p>delete-user works!</p>
+<div class="d-flex flex-column gap-2">
+    <div class="form-group">
+        <label class="form-label">
+            Search for User Id
+        </label>
+        <input type="number" class="form-control" #userId>
+        <button class="btn btn-primary mt-2" (click)="onCLick()">Search</button>
+
+        <div class="text-danger" *ngIf="!foundUser">User Not Found</div>
+    </div>
+    
+</div>
