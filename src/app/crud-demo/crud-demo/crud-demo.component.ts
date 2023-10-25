@@ -1,24 +1,24 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CreateUserComponent } from '../create-user/create-user.component';
-import { DeleteUserComponent } from '../delete-user/delete-user.component';
-import { ListUsersComponent } from '../list-users/list-users.component';
-import { ReadUserComponent } from '../read-user/read-user.component';
-import { UpdateUserComponent } from '../update-user/update-user.component';
+import { CreateUserComponent } from '../crud/create-user/create-user.component';
+import { DeleteUserComponent } from '../crud/delete-user/delete-user.component';
+import { ListUsersComponent } from '../utils/list-users/list-users.component';
+import { ReadUserComponent } from '../crud/read-user/read-user.component';
+import { UpdateUserComponent } from '../crud/update-user/update-user.component';
 
 @Component({
   selector: 'app-crud-demo',
   standalone: true,
   imports: [
-    CommonModule, 
-    CreateUserComponent, 
-    DeleteUserComponent, 
-    ListUsersComponent, 
-    ReadUserComponent, 
-    UpdateUserComponent
+    CommonModule,
+    CreateUserComponent,
+    DeleteUserComponent,
+    ListUsersComponent,
+    ReadUserComponent,
+    UpdateUserComponent,
   ],
   templateUrl: './crud-demo.component.html',
-  styleUrls: ['./crud-demo.component.css']
+  styleUrls: ['./crud-demo.component.css'],
 })
 export class CrudDemoComponent {
   crudOperation: string | undefined;
