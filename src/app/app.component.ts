@@ -11,59 +11,61 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { AppService } from './app.service';
 import { CrudDemoComponent } from './crud-demo/crud-demo/crud-demo.component';
+import { ApplicationLayoutComponent } from './application-layout/application-layout.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, 
-    PersonComponent, 
-    PersonAltComponent, 
-    EventBindComponent, 
-    OutputDemoComponent, 
-    PersonCardComponent, 
-    TemplateDrivenFormComponent, 
+    CommonModule,
+    PersonComponent,
+    PersonAltComponent,
+    EventBindComponent,
+    OutputDemoComponent,
+    PersonCardComponent,
+    TemplateDrivenFormComponent,
     ReactiveFormComponent,
-    CrudDemoComponent
+    CrudDemoComponent,
+    ApplicationLayoutComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  name: string = "Kyriakos"
-  lastname = "Kypraios"
-  
+  name: string = 'Kyriakos';
+  lastname = 'Kypraios';
+
   person: Person = {
-  givenName: "Kyriakos",
-  surName: "Kypraios",
-  age: 32,
-  email: "test@email.com",
-  address: "Athens, Greece"
-  }
-  
+    givenName: 'Kyriakos',
+    surName: 'Kypraios',
+    age: 32,
+    email: 'test@email.com',
+    address: 'Athens, Greece',
+  };
+
   users: Person[] = [];
 
-  sentUser: Person | undefined
+  sentUser: Person | undefined;
 
-  constructor(private appService: AppService = Inject(AppService)) { }
+  constructor(private appService: AppService = Inject(AppService)) {}
 
   ngOnInit(): void {
-      this.appService.getAllUsers().subscribe((users) => {
-        this.users = users
-        console.log(this.users)
-      })
+    this.appService.getAllUsers().subscribe((users) => {
+      this.users = users;
+      console.log(this.users);
+    });
   }
 
   onDeleteUser(index: number) {
-    this.users.splice(index, 1)
+    this.users.splice(index, 1);
   }
 
   onSendUser(user: Person) {
-    console.log(user)
-    this.sentUser = user
+    console.log(user);
+    this.sentUser = user;
   }
 
   onNewPerson(person: Person) {
-    this.users.push(person)
+    this.users.push(person);
   }
 }
